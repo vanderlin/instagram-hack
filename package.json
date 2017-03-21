@@ -2,9 +2,9 @@
   "name": "instagram-hack",
   "version": "1.0.0",
   "description": "'Hack Instagram'",
-  "main": "server.js",
   "scripts": {
     "start": "node server",
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "ISC",
