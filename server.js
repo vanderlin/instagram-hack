@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var history = require('connect-history-api-fallback');
+var request = require('request');
 
 // create the express app
 var app = express();
@@ -14,7 +14,11 @@ app.all('*', function(req, res, next) {
 })
 
 app.get('/', function(req, res){
-    var url = 'https://www.instagram.com/explore/locations/2507883/ideo-cambridge/'
+    var url = req.query.url
+    if (!url) {
+        res.json({error: 'Missing URL'})
+        return
+    }
     request(url, function(error, response, html){
         if(!error){
 			const regex = /<script type="text\/javascript">window\._sharedData = (.*);<\/script>/g;
