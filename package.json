@@ -1,0 +1,15 @@
+{
+  "name": "instagram-hack",
+  "version": "1.0.0",
+  "description": "'Hack Instagram'",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "request": "^2.81.0"
+  }
+}
