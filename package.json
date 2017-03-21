@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "'Hack Instagram'",
   "scripts": {
-    "start": "node server",
-    "postinstall": "npm run build"
+    "start": "node server"
   },
   "author": "",
   "license": "ISC",
