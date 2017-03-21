@@ -19,10 +19,12 @@ app.get('/', function(req, res){
         res.json({error: 'Missing URL'})
         return
     }
-    res.send(url)
-    return
+
     request(url, function(error, response, html){
         if(!error) {
+
+            res.send(html)
+            return 
 			const regex = /<script type="text\/javascript">window\._sharedData = (.*);<\/script>/g;
             var matches = html.match(regex);
             if (matches.length) {
